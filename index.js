@@ -122,7 +122,7 @@ $(document).ready(() => {
   // Certificate PDF rendering functionality
   $('.certificate-card').on('click', function() {
     const pdfName = $(this).find('h3').text().replace(/\s+/g, '_').toLowerCase() + '.pdf';
-    const pdfUrl = `./assets/certificates/${pdfName}`;
+    const pdfUrl = `/assets/certificates/${pdfName}`;
     const overlay = $('#pdf-overlay');
     const pdfViewer = $('#pdf-viewer');
     
