@@ -43,6 +43,18 @@ $(document).ready(() => {
     });
   });
 
+  // Particle background
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80 },
+      color: { value: '#ffffff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5, random: true },
+      size: { value: 3, random: true },
+      move: { enable: true, speed: 1 }
+    }
+  });
+
   // Dark mode toggle with animation
   $('#toggle-mode').on('click', () => {
     $('html').toggleClass('dark');
@@ -71,6 +83,26 @@ $(document).ready(() => {
     maxTilt: 5,
     scale: 1.05,
     transition: true
+  });
+
+  // Certificate PDF rendering functionality
+  $('.certificate-card').on('click', function() {
+    const pdfName = $(this).find('h3').text().replace(/\s+/g, '_').toLowerCase() + '.pdf';
+    const pdfUrl = `./assets/certificates/${pdfName}`;
+    const overlay = $('#pdf-overlay');
+    const pdfViewer = $('#pdf-viewer');
+    
+    pdfViewer.attr('src', pdfUrl);
+    overlay.removeClass('opacity-0 pointer-events-none');
+    overlay.find('div').removeClass('scale-95').addClass('scale-100');
+  });
+
+  $('#pdf-overlay').on('click', function(event) {
+    if (event.target === this) {
+      $(this).addClass('opacity-0 pointer-events-none');
+      $(this).find('div').addClass('scale-95').removeClass('scale-100');
+      $('#pdf-viewer').attr('src', '');
+    }
   });
 
   // Add a typing effect to the header

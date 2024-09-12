@@ -44,6 +44,7 @@
           <ul class="flex space-x-8">
             <li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
             <li><a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projects</a></li>
+            <li><a href="#certificates" class="text-gray-300 hover:text-white transition duration-300">Certificates</a></li>
             <li><a href="#skills" class="text-gray-300 hover:text-white transition duration-300">Skills</a></li>
             <li><a href="#social-media" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
           </ul>
@@ -90,6 +91,44 @@
       </div>
     </section>
 
+    <section id="certificates" class="mb-16 animate-on-scroll">
+      <h2 class="text-4xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">Certificates</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="certificate-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300 cursor-pointer">
+          <h3 class="text-2xl font-semibold mb-3 text-fuchsia-700 dark:text-rose-700">Python Data Science</h3>
+          <p class="text-gray-700 dark:text-gray-300">
+            Data visualization is the practice of representing information and data through visual formats like charts, graphs, and maps.
+            It transforms complex datasets into easily understandable visuals, making patterns, trends, and insights more accessible.
+            By using data visualization, businesses and researchers can quickly grasp key findings, identify anomalies, and make data-driven decisions.
+            For example, a company might use a line graph to track sales trends over time, helping them spot seasonal patterns and adjust strategies accordingly.
+            Essentially, data visualization turns raw data into a story that's easier to interpret and act upon.
+          </p>
+        </div>
+        <div class="certificate-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300 cursor-pointer">
+          <h3 class="text-2xl font-semibold mb-3 text-fuchsia-700 dark:text-rose-700">Introduction to Python</h3>
+          <p class="text-gray-700 dark:text-gray-300">
+            Python is a versatile, high-level programming language known for its simplicity and readability.
+            Its clear syntax and dynamic typing make it accessible to beginners while still powerful for experienced developers.
+            Python is widely used in various fields, including web development, data analysis, artificial intelligence, scientific computing, and automation.
+            It has a rich ecosystem of libraries and frameworks, like Django for web applications and Pandas for data manipulation, which streamline complex tasks and enhance productivity.
+            Python's flexibility and broad support make it a popular choice for a wide range of programming projects.
+          </p>
+        </div>
+        <div class="certificate-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300 cursor-pointer">
+          <h3 class="text-2xl font-semibold mb-3 text-fuchsia-700 dark:text-rose-700">Political Compass</h3>
+          <p class="text-gray-700 dark:text-gray-300">
+            Political theory is the study of ideas and concepts related to politics, governance, and justice.
+            It examines the nature of political institutions, the role of citizens, and the principles behind political decisions and ideologies.
+            Political theory explores foundational questions about authority, power, rights, and the ideal structure of society.
+            The origins of political theory date back to ancient civilizations.
+            Early thinkers like Plato and Aristotle in Greece laid the groundwork with their discussions on democracy, ethics, and political philosophy.
+            Plato's “Republic” and Aristotle's “Politics” are seminal works that continue to influence political thought.
+            Over time, political theory has evolved through various historical contexts, reflecting changing ideas about governance and society
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="skills" class="mb-16 animate-on-scroll">
       <h2 class="text-4xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">Skills and technologies</h2>
       <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
@@ -131,6 +170,14 @@
       <p class="text-2xl font-bold">Ian Souza Freire, your next coding superstar!</p>
     </div>
   </footer>
+
+  <div id="pdf-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl transform scale-95 transition-transform duration-300" style="width: 80%; height: 80%;">
+      <iframe id="pdf-viewer" src="" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div id="particles-js" class="bg-zinc-800 dark:bg-gray-900"></div>
 
   <script src="index.js"></script>
 </body>
