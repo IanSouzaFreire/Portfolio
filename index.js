@@ -26,6 +26,18 @@ function currentAge(year, month, day) {
 $(document).ready(() => {
   $('#age').html(currentAge(2008, 7, 3));
 
+  const pixCanvas = Pix("iantmessenger@gmail.com", "IAN SOUZA FREIRE", "GOIÁS", $('#valor-pix').val(), "Donation", true);
+
+  $('#valor-pix').on('keydown', () => {
+    if (pixCanvas instanceof HTMLCanvasElement) {
+      const qrCodeDataUrl = pixCanvas.toDataURL();
+        
+      $('#qr-code').attr('src', qrCodeDataUrl);
+    } else {
+      console.error("Pix function did not return a valid canvas element.");
+    }
+  })
+
   // Animate elements on scroll
   gsap.registerPlugin(ScrollTrigger);
 

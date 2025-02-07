@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ian Souza Freire - Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/faz-um-pix@2.0.2/lib/browser/faz-um-pix.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -167,7 +168,9 @@
 
   <footer class="bg-zinc-800 dark:bg-gray-900 text-white py-8 mt-16">
     <div class="container mx-auto px-4 text-center">
-      <p class="text-2xl font-bold">Buy me a coffee? pix: iantmessenger@gmail.com</p>
+      <p class="text-2xl font-bold">Buy me a coffee?</p>
+      <img id="qr-code"></img>
+      <input placeholder="R$ 10.00" name="valor" id="valor-pix">
     </div>
   </footer>
 
