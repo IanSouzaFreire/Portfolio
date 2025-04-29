@@ -14,14 +14,9 @@ function currentAge(year, month, day) {
   const currentDate = new Date();
   
   let age = currentDate.getFullYear() - birthDate.getFullYear();
-  const monthDifference = currentDate.getMonth() - birthDate.getMonth();
-  
-  if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
-    age--;
-  }
 
-  if (currentAge.getMonth() < month) {
-    age++;
+  if (currentDate.getMonth() < birthDate.getMonth()) {
+    age--;
   }
   
   return document.createTextNode(age);
